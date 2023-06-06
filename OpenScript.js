@@ -167,6 +167,8 @@ var OpenScript = {
 
     /**
      * The main State class
+     * changes in the state do not result in the re-rendering of the whole DOM 
+     * changes on;y occur in specific parts of the DOM where the changes are required
      */
     State: class {
         
@@ -174,8 +176,8 @@ var OpenScript = {
          * The value of the state
          */
         value;
-
-        static VALUE_CHANGED = "value-changed";
+         // only changes in value  can influence change in state 
+        static VALUE_CHANGED = "value-changed"; 
 
 
         listeners = {}
